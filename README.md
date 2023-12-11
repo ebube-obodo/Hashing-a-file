@@ -1,10 +1,8 @@
-Heelo there here is a break down of what of code does, 
-
 import os
-#This makes a way for the code to interract with the operating system
+# This allows the code to interact with the operating system.
 
 import hashlib
-#This imports the hashing algorithms 
+# This imports various hashing algorithms.
 
 def filepath(Hashfile):
     if not os.path.exists(Hashfile):
@@ -15,7 +13,7 @@ def filepath(Hashfile):
         return "Does not exist"
     else:
         return "Exists"
-#Here I wrote a function that checks if for the file path 
+# This function checks for the file path validity.
 
 def checkalgorithm(hashtype):
     if hashtype.lower() not in hashlib.algorithms_available:
@@ -23,7 +21,7 @@ def checkalgorithm(hashtype):
         return "Wrong Algorithm"
     else:
         return "Accepted"
-#This checks if the hasg type provided is part of the variosu hashing versions 
+# This function verifies if the provided hash type is available among the various hashing versions.
 
 def calchash(Hashfile, hashtype='sha256'):
     validation = filepath(Hashfile)
@@ -42,7 +40,7 @@ def calchash(Hashfile, hashtype='sha256'):
             return None
     else:
         return None
-#i stored the hash value default as sha256 and genaretes a hash vale for the file 
+# The hash value is stored by default as sha256 and generates a hash value for the file.
 
 def kepthash(Hashfile, hashedvalue, hashtxt='hashes.txt'):
     try:
@@ -51,7 +49,7 @@ def kepthash(Hashfile, hashedvalue, hashtxt='hashes.txt'):
         print("Hash saved")
     except IOError as E:
         print(f"Try again {E}")
-#Writes the hased vale and saves it to a file called hashes.txt
+# Writes the hashed value and saves it to a file called hashes.txt.
 
 def comparehashes(Hashfile, storedhash, hashtype='sha256'):
     currenthash = calchash(Hashfile, hashtype)
@@ -61,7 +59,7 @@ def comparehashes(Hashfile, storedhash, hashtype='sha256'):
         return "Correct hash"
     else:
         return "Wrong hash"
-#This takes the hash vale and the hashed file and compaires them
+# Compares the hash value with the hashed file and compares them.
 
 def main():
     print("File Hashing Tool")
@@ -71,4 +69,7 @@ def main():
     if mode == "generate":
         Hashfile = input("Enter the file path: ")
         validate = filepath(Hashfile)...
-#This is the main function that takes the input form the user 
+# The main function receives input from the user.
+
+# Please continue the code from here as per your requirements.
+
